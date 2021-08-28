@@ -6,8 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./gitsearch.component.css']
 })
 export class GitsearchComponent implements OnInit {
+  details: any;
+  repos: any;
+  username: any;
 
-  constructor() { }
+  // constructor(private gitsearch) { }
 
   ngOnInit(): void {
   }
