@@ -10,6 +10,7 @@ import { RepositoriesComponent } from './repositories/repositories.component';
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component'
 import { RouterModule } from '@angular/router';
 import { GitsearcherService } from './gitsearcher.service';
+import { GitsearchComponent } from './gitsearch/gitsearch.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { GitsearcherService } from './gitsearcher.service';
     SearchComponent,
     RepositoriesComponent,
     GitsearchFormComponent,
+    GitsearchComponent,
     
   ],
   imports: [
