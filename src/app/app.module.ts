@@ -8,6 +8,8 @@ import { SearchComponent } from './search/search.component';
 import { HttpClientModule } from '@angular/common/http';
 import { RepositoriesComponent } from './repositories/repositories.component';
 import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component'
+import { RouterModule } from '@angular/router';
+import { GitsearcherService } from './gitsearcher.service';
 
 @NgModule({
   declarations: [
@@ -21,9 +23,13 @@ import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
+    // RouterModule.forRoot(routes),
+    RouterModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [GitsearcherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

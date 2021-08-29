@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Repository } from 'src/app/repository';
 import { GitsearcherService } from 'src/app/gitsearcher.service';
 import { Users } from 'src/app/users';
-import { GitsearchComponent } from 'src/app/gitsearch.component';
+import { GitsearchFormComponent } from './gitsearch-form.component';
 import { AppComponent } from '../app.component';
 
 
