@@ -4,7 +4,7 @@ import { GitsearcherService } from 'src/app/gitsearcher.service';
 import { Users } from 'src/app/users';
 // import { GitsearchFormComponent } from 'src/app/gitsearch-form/gitsearch-form.component';
 import { AppComponent } from '../app.component';
-import { GitsearchComponent }
+import { GitsearchComponent } from '../gitsearch/gitsearch.component';
 
 
 @Component({
