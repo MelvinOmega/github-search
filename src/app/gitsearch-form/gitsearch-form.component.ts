@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Repository } from 'src/app/repository';
 import { GitsearcherService } from 'src/app/gitsearcher.service';
 import { Users } from 'src/app/users';
 // import { GitsearchFormComponent } from 'src/app/gitsearch-form/gitsearch-form.component';
@@ -13,25 +12,23 @@ import { GitsearchComponent } from '../gitsearch/gitsearch.component';
   styleUrls: ['./gitsearch-form.component.css']
 })
 export class GitsearchFormComponent implements OnInit {
-  details: any;
-  repos: any;
-  username: any;
+  details: any ;
+  repos:any;
+  username: string;
 
   constructor(private gitsearcherService: GitsearcherService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
   findUser(){
     this.gitsearcherService.updateProfile(this.username);
     this.gitsearcherService.getProfileInfo(this.username).subscribe(details => {
-      console.log(this.details),
-      this.details= this.details,
+      console.log(details);
+      this.details = details;
     });
-    this.gitsearcherService.getRepoInfo().subscribe((_repos: any)=>{
-      console.log(this.repos),
-      this.repos = this.repos,
-      
-    });
-  }
-
+    this.gitsearcherService.getRepoInfo().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+  })
+}
 }

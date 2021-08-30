@@ -11,6 +11,7 @@ import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.componen
 import { RouterModule } from '@angular/router';
 import { GitsearcherService } from './gitsearcher.service';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
+// import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { GitsearchComponent } from './gitsearch/gitsearch.component';
     RepositoriesComponent,
     GitsearchFormComponent,
     GitsearchComponent,
+    // NotFoundComponent,
     
   ],
   imports: [
