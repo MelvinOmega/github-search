@@ -18,7 +18,7 @@ import {FormsModule} from '@angular/forms';
 export class GitsearchComponent implements OnInit {
   repos: any;
   details: any;
-  username: any;
+  username!: string;
 
   constructor(private gitsearcherService: GitsearcherService) { }
 
@@ -26,13 +26,14 @@ export class GitsearchComponent implements OnInit {
   }
   findUser(){
     this.gitsearcherService.updateProfile(this.username);
-    this.gitsearcherService.getProfileInfo(this.username).subscribe(details => {
+    this.gitsearcherService.getProfileInfo(this.username).subscribe((details: any) => {
       console.log(details);
       this.details = details;
     });
-    this.gitsearcherService.getRepoInfo().subscribe(repos => {
+    this.gitsearcherService.getRepoInfo().subscribe((repos: any) => {
       console.log(repos);
       this.repos = repos;
   })
 
+}
 }

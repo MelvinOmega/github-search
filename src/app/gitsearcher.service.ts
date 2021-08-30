@@ -1,18 +1,28 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { GitsearchComponent } from './gitsearch/gitsearch.component';
+import { RepositoriesComponent } from './repositories/repositories.component';
+import { AppComponent } from './app.component';
+import { GitsearchFormComponent } from './gitsearch-form/gitsearch-form.component';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class GitsearcherService {
-  getProfileInfo(username: any) {
-    throw new Error('Method not implemented.');
+  private username!: string;
+  private clientdetails: string = ''
+
+  constructor(private http:HttpClient) { 
+    console.log("service is now ready");
   }
-  updateProfile(username: any) {
-    throw new Error('Method not implemented.');
+
+  getProfileInfo(username: string) {
+    console.log(this.username)
+    return this.http.get("https://api.github.com/users/" + username + "?access_token=" + this.clientdetails)
   }
   getRepoInfo() {
-    throw new Error('Method not implemented.');
-  }
+    return this.http.get("https://api.github.com/users/" + this.username + "/repos" + "?access_token=" + this.clientdetails)
 
-  constructor() { }
+  }
+  updateProfile() {
+    this.username = this.username;
+  }
 }

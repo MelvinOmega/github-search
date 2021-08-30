@@ -23,11 +23,11 @@ export class GitsearchFormComponent implements OnInit {
   }
   findUser(){
     this.gitsearcherService.updateProfile(this.username);
-    this.gitsearcherService.getProfileInfo(this.username).subscribe(this.details=>{
+    this.gitsearcherService.getProfileInfo(this.username).subscribe(details => {
       console.log(this.details),
-      this.details = this.details,
+      this.details= this.details,
     });
-    this.gitsearcherService.getRepoInfo().subscribe(this.repos=>{
+    this.gitsearcherService.getRepoInfo().subscribe((_repos: any)=>{
       console.log(this.repos),
       this.repos = this.repos,
       
