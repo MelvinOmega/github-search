@@ -24,9 +24,9 @@ export class GitsearchComponent implements OnInit {
 
   ngOnInit(): void {    
   }
-  
+
   findUser(){
-    this.gitsearcherService.updateProfile(this.username);
+    this.gitsearcherService.updateProfile();
     this.gitsearcherService.getProfileInfo(this.username).subscribe((details: any) => {
       console.log(details);
       this.details = details;
@@ -34,7 +34,7 @@ export class GitsearchComponent implements OnInit {
     this.gitsearcherService.getRepoInfo().subscribe((repos: any) => {
       console.log(repos);
       this.repos = repos;
-  })
+  })      
 
 }
 }
