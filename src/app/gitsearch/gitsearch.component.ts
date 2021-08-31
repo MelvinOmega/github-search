@@ -22,7 +22,7 @@ export class GitsearchComponent implements OnInit {
 
   constructor(private gitsearcherService: GitsearcherService) { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {    
   }
   findUser(){
     this.gitsearcherService.updateProfile(this.username);

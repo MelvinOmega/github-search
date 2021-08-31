@@ -14,7 +14,7 @@ import { GitsearchComponent } from '../gitsearch/gitsearch.component';
 export class GitsearchFormComponent implements OnInit {
   details: any ;
   repos:any;
-  username: string;
+  username!: string;
 
   constructor(private gitsearcherService: GitsearcherService) { }
 
